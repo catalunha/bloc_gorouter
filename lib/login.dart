@@ -18,7 +18,7 @@ class LoginPage extends StatelessWidget {
         child: ElevatedButton(
             onPressed: () {
               context.read<AuthCubit>().login();
-              context.goNamed('home');
+              // context.goNamed('home');
             },
             child: const Text('login')),
       ),

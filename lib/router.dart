@@ -28,6 +28,9 @@ abstract class AppRouter {
       print('redirect');
       print(state.fullPath);
       final status = context.read<AuthCubit>().state;
+      if (status && state.fullPath == '/login') {
+        return '/home';
+      }
       if (status) {
         return null;
       }
