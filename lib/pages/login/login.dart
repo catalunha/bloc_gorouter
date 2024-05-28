@@ -7,8 +7,19 @@ import 'package:go_router/go_router.dart';
 
 import 'package:bloc_gorouter/auth_cubit.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  @override
+  void initState() {
+    super.initState();
+    log('initState', name: runtimeType.toString());
+  }
 
   @override
   Widget build(BuildContext context) {
